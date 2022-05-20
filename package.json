@@ -1,0 +1,45 @@
+{
+  "name": "@mafalda/eslint-config",
+  "version": "0.0.0",
+  "description": "Mafalda SFU shareable ESLint config",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "eslint .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mafalda-SFU/eslint-config.git"
+  },
+  "keywords": [
+    "Mafalda",
+    "SFU",
+    "ESLint",
+    "eslintconfig",
+    "config",
+    "linting",
+    "WebRTC",
+    "Mediasoup"
+  ],
+  "author": "Jesús Leganés-Combarro 'piranna' <piranna@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mafalda-SFU/eslint-config/issues"
+  },
+  "homepage": "https://github.com/Mafalda-SFU/eslint-config#readme",
+  "peerDependencies": {
+    "eslint": "^7.20.0"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.2.2",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-sort-destructure-keys": "^1.4.0",
+    "eslint-plugin-sort-keys": "^2.3.5"
+  },
+  "devDependencies": {
+    "eslint": "*",
+    "husky": "^8.0.1"
+  }
+}
