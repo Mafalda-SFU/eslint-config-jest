@@ -19,6 +19,46 @@ module.exports = {
         'jest/require-top-level-describe': 'off',
         'no-focused-tests': 'error'
       }
+    },
+    {
+      extends: [
+        // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        'plugin:@typescript-eslint/recommended',
+        'plugin:@typescript-eslint/recommended-requiring-type-checking',
+        'plugin:import/typescript'
+      ],
+      files: ['*.ts'],
+      parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+      parserOptions: {
+        project: './tsconfig*.json'
+      },
+      plugins: ['@typescript-eslint'], // Enables support for TypeScript
+      rules: {
+        '@typescript-eslint/ban-ts-comment': ['error', {
+          minimumDescriptionLength: 8,
+          'ts-ignore': 'allow-with-description'
+        }],
+        '@typescript-eslint/no-shadow': 'error',
+        // '@typescript-eslint/no-unsafe-argument': 'warn',
+        // '@typescript-eslint/no-unsafe-assignment': 'warn',
+        // '@typescript-eslint/no-unsafe-call': 'warn',
+        // '@typescript-eslint/no-unsafe-member-access': 'warn',
+        // '@typescript-eslint/no-unsafe-return': 'warn',
+        'no-restricted-syntax': [
+          'error',
+          {
+            message: 'Use a #private member instead!',
+            // Forbid usage of `private` keyword instead of
+            // Javascript `#[private]` class members
+            selector: [
+              "MethodDefinition[accessibility='private']",
+              "PropertyDefinition[accessibility='private']",
+              "TSParameterProperty[accessibility='private']"
+            ].join(', ')
+          }
+        ],
+        'no-shadow': 'off'  // Conflicts with `@typescript-eslint/no-shadow`
+      }
     }
   ],
   parserOptions: {
