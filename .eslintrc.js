@@ -1,4 +1,7 @@
 module.exports = {
+  env: {
+    node: true
+  },
   extends: [
     'eslint:recommended',
     'plugin:import/recommended',
@@ -62,7 +65,8 @@ module.exports = {
     }
   ],
   parserOptions: {
-    ecmaVersion: 2020  // Node.js 12
+    ecmaVersion: 2020,  // Node.js 12
+    sourceType: 'module' // Allows for the use of imports
   },
   plugins: ['sort-destructure-keys', 'sort-keys'],
   rules: {
