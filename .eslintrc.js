@@ -73,7 +73,9 @@ module.exports = {
     'arrow-body-style': 'warn',
     'arrow-parens': ['error', 'as-needed'],
     'brace-style': ['error', 'allman', { allowSingleLine: true }],
+    'class-methods-use-this': 'error',
     'comma-dangle': 'error',
+    'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
     curly: ['error', 'multi-line'],
     'function-paren-newline': ['error', 'multiline-arguments'],
     'import/extensions': [
@@ -87,16 +89,27 @@ module.exports = {
       }
     ],
     'import/no-named-as-default': 'warn',
+    'import/order': [
+      'error',
+      {
+        alphabetize: {order: 'asc'},
+        'newlines-between': 'always',
+        warnOnUnassignedImports: true
+      }
+    ],
     'import/prefer-default-export': 'warn',
     indent: ['error', 2, {
       SwitchCase: 1,
       ignoredNodes: ['TemplateLiteral'],
       offsetTernaryExpressions: true
     }],
+    'max-classes-per-file': 'error',
     'max-len': ['warn', {
+      ignoreUrls: true,
       tabWidth: 2
     }],
     'newline-per-chained-call': 'warn',
+    'no-console': 'error',
     'no-extra-boolean-cast': 'error',
     'no-multiple-empty-lines': ['error', { max: 2, maxBOF: 1, maxEOF: 0 }],
     'no-nested-ternary': 'warn',
@@ -133,9 +146,12 @@ module.exports = {
         property: 'setInterval'
       }
     ],
+    'no-shadow': 'warn',
     'no-tabs': 'error',
+    'no-unused-private-class-members': 'error',
     'no-useless-catch': 'error',
     'no-useless-escape': 'error',
+    'no-void': ['error', { allowAsStatement: true }],
     'node/prefer-promises/dns': 'error',
     'node/prefer-promises/fs': 'error',
     'one-var': ['error', 'never'],
