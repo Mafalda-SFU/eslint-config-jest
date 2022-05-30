@@ -41,7 +41,7 @@
     "eslint-plugin-sort-keys": "^2.3.5"
   },
   "devDependencies": {
-    "eslint": "*",
+    "eslint": "^8.16.0",
     "husky": "^8.0.1"
   }
 }
