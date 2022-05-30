@@ -153,7 +153,7 @@ module.exports = {
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', { avoidEscape: true }],
     'sort-destructure-keys/sort-destructure-keys': 'error',
-    'sort-keys': 'off',  // disable default eslint sort-keys
+    'sort-keys': 'off',  // disable eslint `sort-keys` for `sort-keys-fix`
     'sort-keys/sort-keys-fix': ['error', 'asc', {natural: true}]
   }
 };
