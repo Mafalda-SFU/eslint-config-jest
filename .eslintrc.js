@@ -105,7 +105,7 @@ module.exports = {
     }],
     'max-classes-per-file': 'error',
     'max-len': ['warn', {
-      ignoreUrls: true,
+      ignorePattern: '^\\s*(//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$',
       tabWidth: 2
     }],
     'newline-per-chained-call': 'warn',
