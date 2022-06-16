@@ -44,6 +44,8 @@ module.exports = {
           'ts-ignore': 'allow-with-description'
         }],
         '@typescript-eslint/no-shadow': 'error',
+        // Disabled for `unused-imports/no-unused-imports`
+        '@typescript-eslint/no-unused-vars': 'off',
         // '@typescript-eslint/no-unsafe-argument': 'warn',
         // '@typescript-eslint/no-unsafe-assignment': 'warn',
         // '@typescript-eslint/no-unsafe-call': 'warn',
@@ -57,7 +59,7 @@ module.exports = {
     ecmaVersion: 2020,  // Node.js 12
     sourceType: 'module' // Allows for the use of imports
   },
-  plugins: ['sort-destructure-keys', 'sort-keys'],
+  plugins: ['sort-destructure-keys', 'sort-keys', 'unused-imports'],
   rules: {
     '@mafalda/brace-style': [
       'error', 'allman-multiline', { allowSingleLine: true }
@@ -110,6 +112,7 @@ module.exports = {
     'no-shadow': 'warn',
     'no-tabs': 'error',
     'no-unused-private-class-members': 'error',
+    'no-unused-vars': 'off',  // Disabled for `unused-imports/no-unused-imports`
     'no-useless-catch': 'error',
     'no-useless-escape': 'error',
     'no-void': ['error', { allowAsStatement: true }],
@@ -131,6 +134,16 @@ module.exports = {
     quotes: ['error', 'single', { avoidEscape: true }],
     'sort-destructure-keys/sort-destructure-keys': 'error',
     'sort-keys': 'off',  // disable eslint `sort-keys` for `sort-keys-fix`
-    'sort-keys/sort-keys-fix': ['error', 'asc', {natural: true}]
+    'sort-keys/sort-keys-fix': ['error', 'asc', {natural: true}],
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+        vars: 'all',
+        varsIgnorePattern: '^_'
+      }
+    ]
   }
 };
