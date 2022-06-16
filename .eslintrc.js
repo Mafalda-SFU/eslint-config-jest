@@ -20,24 +20,23 @@ module.exports = {
       rules: {
         'jest/no-disabled-tests': 'warn',
         'jest/no-hooks': ['error', { allow: ['afterEach', 'beforeEach'] }],
-        'jest/require-top-level-describe': 'off',
+        'jest/require-top-level-describe': 'off',  // NOTE: Opinionated
         'no-focused-tests': 'error'
       }
     },
     {
       extends: [
         'plugin:@mafalda/typescript',
-        // Uses the recommended rules from the @typescript-eslint/eslint-plugin
+        // Use the recommended rules from the `@typescript-eslint/eslint-plugin`
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript'
       ],
       files: ['*.ts'],
-      parser: '@typescript-eslint/parser', // Specifies the ESLint parser
+      parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
       parserOptions: {
         project: './tsconfig*.json'
       },
-      plugins: ['@typescript-eslint'], // Enables support for TypeScript
       rules: {
         '@typescript-eslint/ban-ts-comment': ['error', {
           minimumDescriptionLength: 8,
@@ -51,12 +50,12 @@ module.exports = {
         // '@typescript-eslint/no-unsafe-call': 'warn',
         // '@typescript-eslint/no-unsafe-member-access': 'warn',
         // '@typescript-eslint/no-unsafe-return': 'warn',
-        'no-shadow': 'off'  // Conflicts with `@typescript-eslint/no-shadow`
+        'no-shadow': 'off'  // Disabled for `@typescript-eslint/no-shadow`
       }
     }
   ],
   parserOptions: {
-    ecmaVersion: 2020,  // Node.js 12
+    ecmaVersion: 2020,  // Node.js 14
     sourceType: 'module' // Allows for the use of imports
   },
   plugins: ['sort-destructure-keys', 'sort-keys', 'unused-imports'],
@@ -75,6 +74,7 @@ module.exports = {
       'error',
       'ignorePackages',
       {
+        // ESM spec requires extensions for all `import` statements
         js: 'never',
         jsx: 'never',
         ts: 'never',
@@ -98,6 +98,8 @@ module.exports = {
     }],
     'max-classes-per-file': 'error',
     'max-len': ['warn', {
+      // Ignore comment lines that pass max length that have just only an URL.
+      // See https://github.com/eslint/eslint/issues/15928
       ignorePattern: '^\\s*(//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$',
       tabWidth: 2
     }],
@@ -134,7 +136,7 @@ module.exports = {
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', { avoidEscape: true }],
     'sort-destructure-keys/sort-destructure-keys': 'error',
-    'sort-keys': 'off',  // disable eslint `sort-keys` for `sort-keys-fix`
+    'sort-keys': 'off',  // Disabled for `sort-keys-fix`
     'sort-keys/sort-keys-fix': ['error', 'asc', {natural: true}],
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
