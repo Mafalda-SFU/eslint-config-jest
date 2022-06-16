@@ -118,6 +118,7 @@ module.exports = {
     'no-void': ['error', { allowAsStatement: true }],
     'node/prefer-promises/dns': 'error',
     'node/prefer-promises/fs': 'error',
+    'object-curly-newline': ['error', { consistent: true, multiline: true }],
     'one-var': ['error', 'never'],
     'operator-linebreak': ['warn', 'before'],
     'prefer-destructuring': [
