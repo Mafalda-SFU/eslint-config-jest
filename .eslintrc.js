@@ -19,7 +19,7 @@ module.exports = {
       plugins: ['jest'],
       rules: {
         'jest/no-disabled-tests': 'warn',
-        'jest/no-hooks': 'off',
+        'jest/no-hooks': ['error', { allow: ['afterEach', 'beforeEach'] }],
         'jest/require-top-level-describe': 'off',
         'no-focused-tests': 'error'
       }
@@ -70,7 +70,7 @@ module.exports = {
     'comma-dangle': 'error',
     'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
     curly: ['error', 'multi-line'],
-    'function-paren-newline': ['error', 'multiline-arguments'],
+    'function-paren-newline': ['error', 'consistent'],
     'import/extensions': [
       'error',
       'ignorePackages',
