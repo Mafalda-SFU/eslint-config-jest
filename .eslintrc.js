@@ -4,6 +4,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:@mafalda/recommended',
     'plugin:import/recommended',
     'plugin:json/recommended',
     'plugin:node/recommended'
@@ -25,6 +26,7 @@ module.exports = {
     },
     {
       extends: [
+        'plugin:@mafalda/typescript',
         // Uses the recommended rules from the @typescript-eslint/eslint-plugin
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -47,19 +49,6 @@ module.exports = {
         // '@typescript-eslint/no-unsafe-call': 'warn',
         // '@typescript-eslint/no-unsafe-member-access': 'warn',
         // '@typescript-eslint/no-unsafe-return': 'warn',
-        'no-restricted-syntax': [
-          'error',
-          {
-            message: 'Use a #private member instead!',
-            // Forbid usage of `private` keyword instead of
-            // Javascript `#[private]` class members
-            selector: [
-              "MethodDefinition[accessibility='private']",
-              "PropertyDefinition[accessibility='private']",
-              "TSParameterProperty[accessibility='private']"
-            ].join(', ')
-          }
-        ],
         'no-shadow': 'off'  // Conflicts with `@typescript-eslint/no-shadow`
       }
     }
@@ -70,9 +59,11 @@ module.exports = {
   },
   plugins: ['sort-destructure-keys', 'sort-keys'],
   rules: {
+    '@mafalda/brace-style': [
+      'error', 'allman-multiline', { allowSingleLine: true }
+    ],
     'arrow-body-style': 'warn',
     'arrow-parens': ['error', 'as-needed'],
-    'brace-style': ['error', 'allman', { allowSingleLine: true }],
     'class-methods-use-this': 'error',
     'comma-dangle': 'error',
     'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
@@ -116,36 +107,6 @@ module.exports = {
     'no-new': 'warn',
     'no-param-reassign': 'warn',
     'no-plusplus': 'warn',
-    'no-restricted-globals': [
-      'error',
-      'event',
-      {
-        message: 'Avoid using setInterval.',
-        name: 'clearInterval'
-      },
-      {
-        message: 'Avoid using setInterval.',
-        name: 'setInterval'
-      }
-    ],
-    'no-restricted-properties': [
-      'error',
-      {
-        message: 'Avoid using event.',
-        object: 'window',
-        property: 'event'
-      },
-      {
-        message: 'Avoid using setInterval.',
-        object: 'window',
-        property: 'clearInterval'
-      },
-      {
-        message: 'Avoid using setInterval.',
-        object: 'window',
-        property: 'setInterval'
-      }
-    ],
     'no-shadow': 'warn',
     'no-tabs': 'error',
     'no-unused-private-class-members': 'error',
