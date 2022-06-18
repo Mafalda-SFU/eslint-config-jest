@@ -1,5 +1,10 @@
+const ecmaVersion = 2022  // Node.js 16
+const tabWidth = 2
+
+
 module.exports = {
   env: {
+    [`es${ecmaVersion}`]: true
   },
   extends: [
     'eslint:recommended',
@@ -57,7 +62,7 @@ module.exports = {
     }
   ],
   parserOptions: {
-    ecmaVersion: 2020,  // Node.js 14
+    ecmaVersion,
     sourceType: 'module' // Allows for the use of imports
   },
   plugins: ['sort-destructure-keys', 'sort-keys', 'unused-imports'],
@@ -86,7 +91,7 @@ module.exports = {
       }
     ],
     'import/prefer-default-export': 'warn',
-    indent: ['error', 2, {
+    indent: ['error', tabWidth, {
       SwitchCase: 1,
       ignoredNodes: ['TemplateLiteral'],
       offsetTernaryExpressions: true
@@ -96,7 +101,7 @@ module.exports = {
       // Ignore comment lines that pass max length that have just only an URL.
       // See https://github.com/eslint/eslint/issues/15928
       ignorePattern: '^\\s*(//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$',
-      tabWidth: 2
+      tabWidth
     }],
     'n/prefer-promises/dns': 'error',
     'n/prefer-promises/fs': 'error',
