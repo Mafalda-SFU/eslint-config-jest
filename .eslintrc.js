@@ -70,6 +70,7 @@ module.exports = {
     '@mafalda/brace-style': [
       'error', 'allman-multiline', {allowSingleLine: true}
     ],
+    'array-bracket-spacing': 'error',
     'arrow-body-style': 'warn',
     'arrow-parens': ['error', 'as-needed'],
     'class-methods-use-this': 'error',
