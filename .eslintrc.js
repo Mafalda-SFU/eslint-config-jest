@@ -123,7 +123,6 @@ module.exports = {
     'object-curly-newline': ['error', {consistent: true, multiline: true}],
     'object-curly-spacing': 'error',
     'one-var': ['error', 'never'],
-    'operator-linebreak': ['warn', 'before'],
     'prefer-destructuring': [
       'error',
       {
