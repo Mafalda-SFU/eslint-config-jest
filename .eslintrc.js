@@ -83,6 +83,9 @@ module.exports = {
       'error', 'ignorePackages'
     ],
     'import/no-named-as-default': 'warn',
+    // Disabled since it doesn't have support for `exports` field and already
+    // overlaps with `n/no-missing-import` rule
+    'import/no-unresolved': 'off',
     'import/order': [
       'error',
       {
