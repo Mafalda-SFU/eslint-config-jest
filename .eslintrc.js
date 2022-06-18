@@ -70,18 +70,11 @@ module.exports = {
     'class-methods-use-this': 'error',
     'comma-dangle': 'error',
     'consistent-return': ['error', {treatUndefinedAsUnspecified: true}],
-    curly: ['error', 'multi-line'],
+    curly: ['error', 'multi'],
     'function-paren-newline': ['error', 'consistent'],
     'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        // ESM spec requires extensions for all `import` statements
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never'
-      }
+      // ESM spec requires extensions for all `import` statements
+      'error', 'ignorePackages'
     ],
     'import/no-named-as-default': 'warn',
     'import/order': [
