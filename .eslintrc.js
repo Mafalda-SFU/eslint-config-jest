@@ -19,7 +19,7 @@ module.exports = {
       plugins: ['jest'],
       rules: {
         'jest/no-disabled-tests': 'warn',
-        'jest/no-hooks': ['error', { allow: ['afterEach', 'beforeEach'] }],
+        'jest/no-hooks': ['error', {allow: ['afterEach', 'beforeEach']}],
         'jest/require-top-level-describe': 'off',  // NOTE: Opinionated
         'no-focused-tests': 'error'
       }
@@ -64,13 +64,13 @@ module.exports = {
   plugins: ['sort-destructure-keys', 'sort-keys', 'unused-imports'],
   rules: {
     '@mafalda/brace-style': [
-      'error', 'allman-multiline', { allowSingleLine: true }
+      'error', 'allman-multiline', {allowSingleLine: true}
     ],
     'arrow-body-style': 'warn',
     'arrow-parens': ['error', 'as-needed'],
     'class-methods-use-this': 'error',
     'comma-dangle': 'error',
-    'consistent-return': ['error', { treatUndefinedAsUnspecified: true }],
+    'consistent-return': ['error', {treatUndefinedAsUnspecified: true}],
     curly: ['error', 'multi-line'],
     'function-paren-newline': ['error', 'consistent'],
     'import/extensions': [
@@ -111,7 +111,7 @@ module.exports = {
     'newline-per-chained-call': 'warn',
     'no-console': 'error',
     'no-extra-boolean-cast': 'error',
-    'no-multiple-empty-lines': ['error', { max: 2, maxBOF: 1, maxEOF: 0 }],
+    'no-multiple-empty-lines': ['error', {max: 2, maxBOF: 1, maxEOF: 0}],
     'no-nested-ternary': 'warn',
     'no-new': 'warn',
     'no-param-reassign': 'warn',
@@ -122,8 +122,8 @@ module.exports = {
     'no-unused-vars': 'off',  // Disabled for `unused-imports/no-unused-imports`
     'no-useless-catch': 'error',
     'no-useless-escape': 'error',
-    'no-void': ['error', { allowAsStatement: true }],
-    'object-curly-newline': ['error', { consistent: true, multiline: true }],
+    'no-void': ['error', {allowAsStatement: true}],
+    'object-curly-newline': ['error', {consistent: true, multiline: true}],
     'object-curly-spacing': 'error',
     'one-var': ['error', 'never'],
     'operator-linebreak': ['warn', 'before'],
@@ -138,7 +138,7 @@ module.exports = {
       }
     ],
     'quote-props': ['error', 'as-needed'],
-    quotes: ['error', 'single', { avoidEscape: true }],
+    quotes: ['error', 'single', {avoidEscape: true}],
     'sort-destructure-keys/sort-destructure-keys': 'error',
     'sort-keys': 'off',  // Disabled for `sort-keys-fix`
     'sort-keys/sort-keys-fix': ['error', 'asc', {natural: true}],
