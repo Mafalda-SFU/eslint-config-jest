@@ -45,12 +45,15 @@ module.exports = {
         '@typescript-eslint/no-shadow': 'error',
         // Disabled for `unused-imports/no-unused-imports`
         '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/object-curly-spacing': 'error',
         // '@typescript-eslint/no-unsafe-argument': 'warn',
         // '@typescript-eslint/no-unsafe-assignment': 'warn',
         // '@typescript-eslint/no-unsafe-call': 'warn',
         // '@typescript-eslint/no-unsafe-member-access': 'warn',
         // '@typescript-eslint/no-unsafe-return': 'warn',
-        'no-shadow': 'off'  // Disabled for `@typescript-eslint/no-shadow`
+        'no-shadow': 'off',  // Disabled for `@typescript-eslint/no-shadow`
+        // Disabled for `@typescript-eslint/object-curly-spacing`
+        'object-curly-spacing': 'off'
       }
     }
   ],
@@ -121,6 +124,7 @@ module.exports = {
     'no-useless-escape': 'error',
     'no-void': ['error', { allowAsStatement: true }],
     'object-curly-newline': ['error', { consistent: true, multiline: true }],
+    'object-curly-spacing': 'error',
     'one-var': ['error', 'never'],
     'operator-linebreak': ['warn', 'before'],
     'prefer-destructuring': [
