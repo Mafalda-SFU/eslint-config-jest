@@ -7,7 +7,7 @@ module.exports = {
     'plugin:@mafalda/recommended',
     'plugin:import/recommended',
     'plugin:json/recommended',
-    'plugin:node/recommended'
+    'plugin:n/recommended'
   ],
   overrides: [
     {
@@ -103,6 +103,8 @@ module.exports = {
       ignorePattern: '^\\s*(//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$',
       tabWidth: 2
     }],
+    'n/prefer-promises/dns': 'error',
+    'n/prefer-promises/fs': 'error',
     'newline-per-chained-call': 'warn',
     'no-console': 'error',
     'no-extra-boolean-cast': 'error',
@@ -118,8 +120,6 @@ module.exports = {
     'no-useless-catch': 'error',
     'no-useless-escape': 'error',
     'no-void': ['error', { allowAsStatement: true }],
-    'node/prefer-promises/dns': 'error',
-    'node/prefer-promises/fs': 'error',
     'object-curly-newline': ['error', { consistent: true, multiline: true }],
     'one-var': ['error', 'never'],
     'operator-linebreak': ['warn', 'before'],
