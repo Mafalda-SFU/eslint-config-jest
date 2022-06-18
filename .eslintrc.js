@@ -111,7 +111,7 @@ module.exports = {
     'no-multiple-empty-lines': ['error', {max: 2, maxBOF: 1, maxEOF: 0}],
     'no-nested-ternary': 'warn',
     'no-new': 'warn',
-    'no-param-reassign': 'warn',
+    'no-param-reassign': 'off',  // NOTE: Opinionated
     'no-plusplus': 'warn',
     'no-shadow': 'warn',
     'no-tabs': 'error',
