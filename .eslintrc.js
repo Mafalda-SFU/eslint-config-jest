@@ -119,6 +119,7 @@ module.exports = {
     'no-plusplus': 'warn',
     'no-shadow': 'warn',
     'no-tabs': 'error',
+    'no-undef-init': 'error',
     'no-unused-private-class-members': 'error',
     'no-unused-vars': 'off',  // Disabled for `unused-imports/no-unused-imports`
     'no-useless-catch': 'error',
