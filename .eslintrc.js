@@ -102,9 +102,11 @@ module.exports = {
     }],
     'max-classes-per-file': 'error',
     'max-len': ['warn', {
-      // Ignore comment lines that pass max length that have just only an URL.
+      // Ignore comment lines that pass the max length limit that have just only
+      // an URL or an `import` statement without comments nor named exports.
       // See https://github.com/eslint/eslint/issues/15928
-      ignorePattern: '^\\s*(//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$',
+      ignorePattern: '^\\s*((//|\\*)?\\s*\\S*[^:/?#]://[^?#]\\S*\\s*$|import' +
+        '\\s([^\\{]|//|/\\*)+)',
       tabWidth
     }],
     'n/prefer-promises/dns': 'error',
