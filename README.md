@@ -4,7 +4,7 @@ Mafalda SFU shareable ESLint config
 
 ## 🚥 Semantic Versioning Policy
 
-`eslint-plugin-node` follows semantic versioning and ESLint's Semantic
+`@mafalda/eslint-config` follows semantic versioning and ESLint's Semantic
 Versioning Policy.
 
 - Patch release (intended to not break your lint build)

@@ -63,7 +63,7 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion,
-    sourceType: 'module' // Allows for the use of imports
+    sourceType: 'module'  // Allows for the use of imports
   },
   plugins: [
     'require-duplicate',
