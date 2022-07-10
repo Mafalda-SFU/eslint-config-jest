@@ -65,7 +65,12 @@ module.exports = {
     ecmaVersion,
     sourceType: 'module' // Allows for the use of imports
   },
-  plugins: ['sort-destructure-keys', 'sort-keys', 'unused-imports'],
+  plugins: [
+    'require-duplicate',
+    'sort-destructure-keys',
+    'sort-keys',
+    'unused-imports'
+  ],
   rules: {
     '@mafalda/brace-style': [
       'error', 'allman-multiline', {allowSingleLine: true}
@@ -142,6 +147,7 @@ module.exports = {
     ],
     'quote-props': ['error', 'as-needed'],
     quotes: ['error', 'single', {avoidEscape: true}],
+    'require-duplicate/no-duplicate': 'error',
     'sort-destructure-keys/sort-destructure-keys': 'error',
     'sort-keys': 'off',  // Disabled for `sort-keys-fix`
     'sort-keys/sort-keys-fix': ['error', 'asc', {natural: true}],
