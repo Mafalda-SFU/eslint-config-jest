@@ -84,8 +84,9 @@ module.exports = {
     curly: ['error', 'multi'],
     'function-paren-newline': ['error', 'consistent'],
     'import/extensions': [
-      // ESM spec requires extensions for all `import` statements
-      'error', 'ignorePackages'
+      // ESM spec requires extensions for all `import` statements, but
+      // Typescript forbids them for Typescript files, see ts(2691) error.
+      'error', 'ignorePackages', {ts: 'never', tsx: 'never'}
     ],
     'import/no-named-as-default': 'warn',
     // Disabled since it doesn't have support for `exports` field and already
