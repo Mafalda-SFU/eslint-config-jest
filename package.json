@@ -4,7 +4,7 @@
   "description": "Mafalda SFU shareable ESLint config",
   "main": ".eslintrc.js",
   "scripts": {
-    "docs": "cp README.md docs/ && jsdoc2md lib/**/*.js > docs/API.md",
+    "docs": "cp README.md docs/ && jsdoc2md .*.js > docs/API.md",
     "lint": "eslint .",
     "predocs": "mkdir -p docs/",
     "prepare": "husky install",
