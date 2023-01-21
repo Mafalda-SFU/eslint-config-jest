@@ -1,3 +1,6 @@
+.github/
 .husky/
+coverage/
+docs/
 test/
 *.tgz
