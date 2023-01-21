@@ -40,9 +40,15 @@ module.exports = {
       ],
       plugins: ['jest'],
       rules: {
+        'jest/consistent-test-it': [
+          'error', {withinDescribe: 'test'}  // NOTE: Opinionated
+        ],
         'jest/no-disabled-tests': 'warn',
         'jest/no-focused-tests': 'error',
         'jest/no-hooks': ['error', {allow: ['afterEach', 'beforeEach']}],
+        'jest/prefer-lowercase-title': [
+          'error', {ignore: ['describe', 'test']}  // NOTE: Opinionated
+        ],
         'jest/require-top-level-describe': 'off'  // NOTE: Opinionated
       }
     },

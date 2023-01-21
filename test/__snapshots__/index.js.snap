@@ -46,6 +46,12 @@ Object {
         "jest",
       ],
       "rules": Object {
+        "jest/consistent-test-it": Array [
+          "error",
+          Object {
+            "withinDescribe": "test",
+          },
+        ],
         "jest/no-disabled-tests": "warn",
         "jest/no-focused-tests": "error",
         "jest/no-hooks": Array [
@@ -54,6 +60,15 @@ Object {
             "allow": Array [
               "afterEach",
               "beforeEach",
+            ],
+          },
+        ],
+        "jest/prefer-lowercase-title": Array [
+          "error",
+          Object {
+            "ignore": Array [
+              "describe",
+              "test",
             ],
           },
         ],
