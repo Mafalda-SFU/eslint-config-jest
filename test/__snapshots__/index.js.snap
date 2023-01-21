@@ -21,7 +21,8 @@ Object {
         "plugin:jest/all",
       ],
       "files": Array [
-        "__tests__/**",
+        "**/__tests__/**/*.[jt]s?(x)",
+        "**/?(*.)+(spec|test).[jt]s?(x)",
       ],
       "plugins": Array [
         "jest",

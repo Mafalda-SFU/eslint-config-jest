@@ -19,7 +19,7 @@ module.exports = {
         'jest/globals': true
       },
       extends: ['plugin:jest/all'],
-      files: ['__tests__/**'],
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       plugins: ['jest'],
       rules: {
         'jest/no-disabled-tests': 'warn',
