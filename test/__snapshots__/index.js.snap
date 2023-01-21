@@ -24,11 +24,30 @@ Object {
         "**/__tests__/**/*.[jt]s?(x)",
         "**/?(*.)+(spec|test).[jt]s?(x)",
       ],
+      "overrides": Array [
+        Object {
+          "files": Array [
+            "*.js?(x)",
+          ],
+          "rules": Object {
+            "jest/unbound-method": "off",
+          },
+        },
+        Object {
+          "files": Array [
+            "*.ts?(x)",
+          ],
+          "rules": Object {
+            "@typescript-eslint/unbound-method": "off",
+          },
+        },
+      ],
       "plugins": Array [
         "jest",
       ],
       "rules": Object {
         "jest/no-disabled-tests": "warn",
+        "jest/no-focused-tests": "error",
         "jest/no-hooks": Array [
           "error",
           Object {
@@ -39,7 +58,6 @@ Object {
           },
         ],
         "jest/require-top-level-describe": "off",
-        "no-focused-tests": "error",
       },
     },
     Object {
@@ -50,7 +68,7 @@ Object {
         "plugin:import/typescript",
       ],
       "files": Array [
-        "*.ts",
+        "*.ts?(x)",
       ],
       "parser": "@typescript-eslint/parser",
       "parserOptions": Object {

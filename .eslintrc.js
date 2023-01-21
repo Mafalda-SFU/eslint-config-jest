@@ -20,12 +20,28 @@ module.exports = {
       },
       extends: ['plugin:jest/all'],
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      overrides: [
+        {
+          files: ['*.js?(x)'],
+          rules: {
+            // requires types information, provided by `@typescript-eslint`
+            'jest/unbound-method': 'off'
+          }
+        },
+        {
+          files: ['*.ts?(x)'],
+          rules: {
+            // Disabled for `jest/unbound-method`
+            '@typescript-eslint/unbound-method': 'off'
+          }
+        }
+      ],
       plugins: ['jest'],
       rules: {
         'jest/no-disabled-tests': 'warn',
+        'jest/no-focused-tests': 'error',
         'jest/no-hooks': ['error', {allow: ['afterEach', 'beforeEach']}],
-        'jest/require-top-level-describe': 'off',  // NOTE: Opinionated
-        'no-focused-tests': 'error'
+        'jest/require-top-level-describe': 'off'  // NOTE: Opinionated
       }
     },
     {
@@ -36,7 +52,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:import/typescript'
       ],
-      files: ['*.ts'],
+      files: ['*.ts?(x)'],
       parser: '@typescript-eslint/parser',  // Specifies the ESLint parser
       parserOptions: {
         project: './tsconfig*.json'
