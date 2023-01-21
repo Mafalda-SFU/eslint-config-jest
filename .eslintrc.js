@@ -24,7 +24,9 @@ module.exports = {
         {
           files: ['*.js?(x)'],
           rules: {
-            // requires types information, provided by `@typescript-eslint`
+            // requires types information, provided by `@typescript-eslint`. It
+            // should fail silently if not available , but it doesn't, so we
+            // explicitly disable it to be on the safe sides.
             'jest/unbound-method': 'off'
           }
         },
