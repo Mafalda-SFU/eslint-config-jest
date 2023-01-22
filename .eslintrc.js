@@ -43,12 +43,17 @@ module.exports = {
         'jest/consistent-test-it': [
           'error', {withinDescribe: 'test'}  // NOTE: Opinionated
         ],
+        'jest/max-expects': 'off',  // NOTE: Opinionated
         'jest/no-disabled-tests': 'warn',
         'jest/no-focused-tests': 'error',
         'jest/no-hooks': ['error', {allow: ['afterEach', 'beforeEach']}],
+        'jest/no-large-snapshots': [
+          'error', {inlineMaxSize: 50, maxSize: Infinity}  // NOTE: Opinionated
+        ],
         'jest/prefer-lowercase-title': [
           'error', {ignore: ['describe', 'test']}  // NOTE: Opinionated
         ],
+        'jest/prefer-snapshot-hint': 'off',  // NOTE: Opinionated
         'jest/require-top-level-describe': 'off'  // NOTE: Opinionated
       }
     },

@@ -52,6 +52,7 @@ Object {
             "withinDescribe": "test",
           },
         ],
+        "jest/max-expects": "off",
         "jest/no-disabled-tests": "warn",
         "jest/no-focused-tests": "error",
         "jest/no-hooks": Array [
@@ -63,6 +64,13 @@ Object {
             ],
           },
         ],
+        "jest/no-large-snapshots": Array [
+          "error",
+          Object {
+            "inlineMaxSize": 50,
+            "maxSize": Infinity,
+          },
+        ],
         "jest/prefer-lowercase-title": Array [
           "error",
           Object {
@@ -72,6 +80,7 @@ Object {
             ],
           },
         ],
+        "jest/prefer-snapshot-hint": "off",
         "jest/require-top-level-describe": "off",
       },
     },
