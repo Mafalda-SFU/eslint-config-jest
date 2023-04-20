@@ -1,6 +1,6 @@
 {
   "name": "@mafalda-sfu/eslint-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mafalda SFU shareable ESLint config",
   "main": ".eslintrc.js",
   "scripts": {
