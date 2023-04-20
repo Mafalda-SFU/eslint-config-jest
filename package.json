@@ -1,6 +1,6 @@
 {
   "name": "@mafalda-sfu/eslint-config",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Mafalda SFU shareable ESLint config",
   "main": ".eslintrc.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "eslint": "^8.38.0"
   },
   "dependencies": {
-    "@mafalda-sfu/eslint-plugin": "^0.1.0",
+    "@mafalda-sfu/eslint-plugin": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
     "eslint-plugin-import": "^2.27.5",
