@@ -8,7 +8,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:@mafalda/recommended',
+    'plugin:@mafalda-sfu/recommended',
     'plugin:import/recommended',
     'plugin:json/recommended',
     'plugin:n/recommended'
@@ -59,7 +59,7 @@ module.exports = {
     },
     {
       extends: [
-        'plugin:@mafalda/typescript',
+        'plugin:@mafalda-sfu/typescript',
         // Use the recommended rules from the `@typescript-eslint/eslint-plugin`
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
@@ -101,7 +101,7 @@ module.exports = {
     'unused-imports'
   ],
   rules: {
-    '@mafalda/brace-style': [
+    '@mafalda-sfu/brace-style': [
       'error', 'allman-multiline', {allowSingleLine: true}
     ],
     'array-bracket-spacing': 'error',

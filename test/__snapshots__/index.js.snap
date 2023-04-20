@@ -7,7 +7,7 @@ Object {
   },
   "extends": Array [
     "eslint:recommended",
-    "plugin:@mafalda/recommended",
+    "plugin:@mafalda-sfu/recommended",
     "plugin:import/recommended",
     "plugin:json/recommended",
     "plugin:n/recommended",
@@ -86,7 +86,7 @@ Object {
     },
     Object {
       "extends": Array [
-        "plugin:@mafalda/typescript",
+        "plugin:@mafalda-sfu/typescript",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
         "plugin:import/typescript",
@@ -125,7 +125,7 @@ Object {
     "unused-imports",
   ],
   "rules": Object {
-    "@mafalda/brace-style": Array [
+    "@mafalda-sfu/brace-style": Array [
       "error",
       "allman-multiline",
       Object {
