@@ -1,6 +1,6 @@
-# eslint-config
+# @mafalda-sfu/eslint-config-jest
 
-Mafalda SFU shareable ESLint config
+Mafalda SFU shareable ESLint config for Jest testing framework
 
 ## 🚥 Semantic Versioning Policy
 
