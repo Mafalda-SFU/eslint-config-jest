@@ -1,6 +1,6 @@
 {
   "name": "@mafalda-sfu/eslint-config-jest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Mafalda SFU shareable ESLint config for Jest testing framework",
   "main": ".eslintrc.js",
   "scripts": {
